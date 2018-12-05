@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="25" failures="0" name="com.sg.superherodb.dao.DaoDbImplTest" time="7.868" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
+    <property name="java.vm.version" value="25.181-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\repo\nicholas-stepka-individual-work\mavenproject3\SuperHeroDB"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="netbeans.deploy" value="true"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\nstep\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python36\;C:\Python36\Scripts\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Users\nstep\AppData\Local\Microsoft\WindowsApps;C:\Users\nstep\AppData\Local\atom\bin;C:\Users\nstep\AppData\Local\GitHubDesktop\bin;C:\Program Files\Java\jdk1.8.0\bin\javac;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\nstep"/>
+    <property name="user.timezone" value="America/Chicago"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="nstep"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/jsp/editSightingForm.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_181"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_181\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_181\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 8.2\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="netbeans.deploy.clientUrlPart" value="/jsp/editSightingForm.jsp"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testDeleteOrganization" time="1.722"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllOrganizations" time="0.329"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testAddHero" time="0.358"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testUpdateOrganization" time="0.216"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllLocationsofHero" time="0.268"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testAddSighting" time="0.419"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testAddOrganization" time="0.36"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllHeros" time="0.244"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testUpdateHero" time="0.138"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetOrgById" time="0.296"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllSightings" time="0.295"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testDeleteSightingById" time="0.423"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetHero" time="0.327"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetSightingById" time="0.231"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testUpdateSighting" time="0.23"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testAddLocation" time="0.204"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllSightingsOnDate" time="0.269"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllHerosOfOrganzation" time="0.223"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testDeleteHero" time="0.149"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllHerosAtLocation" time="0.229"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testDeleteLocationByID" time="0.219"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllLocations" time="0.104"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetLocationById" time="0.105"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testUpdateLocation" time="0.142"/>
+  <testcase classname="com.sg.superherodb.dao.DaoDbImplTest" name="testGetAllOrganizationOfHero" time="0.202"/>
+</testsuite>
