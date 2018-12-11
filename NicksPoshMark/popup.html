@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <style type="text/css">
+
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+    body {
+      /* width: 500px; */
+      overflow-y: hidden;
+      background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+      background-size: 200%;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    ::-webkit-scrollbar{
+      width:5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+       background-color: rgba(0,0,0,0.3);
+       border-radius: 5px;
+    }
+
+    * {
+      font-family: 'Noto Sans', sans-serif;
+      transition: 0.3s all;
+    }
+
+      h1, h2, h2, p {
+        margin: 2px;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+      }
+
+      h2 {
+        text-transform: uppercase;
+      }
+      p {
+        font-size: .9em;
+      }
+      br {
+        height: 10px;
+        margin: 0;
+        padding: 0;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #8c8b8b;
+        opacity: .7;
+      }
+      i {
+        padding: 10px;
+        font-size: 20px;
+      }
+      #consoleWindow p {
+        font-size: 1em;
+        position: relative;
+        right: 3px;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+      }
+      .center {
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        margin-left: 2px;
+        margin-right: 5px;
+      }
+      button {
+        background-color: #328ebc;
+        border: none;
+        color: white;
+        padding: 5px 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        width: 100%;
+        text-transform: uppercase;
+        border-radius: 0px;
+        position: relative;
+      }
+      button:active,
+      button:hover {
+        background-color: #1e5570;
+        outline:none;
+      }
+      button:focus {
+        outline:0;
+      }
+      input:focus {
+        outline:none;
+      }
+      .green-bg {
+        background-color: #4CAF50;
+      }
+      .green-bg:active,
+      .green-bg:hover {
+        background-color: #37833a;
+      }
+      .blue-bg {
+        background-color: #3fcbff;
+      }
+      .blue-bg:active,
+      .blue-bg:hover {
+        background-color: #3292b6;
+      }
+      .green {
+        color: #4CAF50;
+      }
+      .black {
+        color: black;
+      }
+      .content {
+        display: flex;
+        overflow-y: hidden;
+      }
+
+      .buttons {
+        flex-basis: 50%;
+        width: 50%;
+        /* height: 90vw; */
+        height: 515px;
+        padding-top: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        padding-right: 5px;
+        margin-bottom: 1.5vw;
+        /*left: 10px;*/
+      }
+      .console {
+        /* height: 105vw; */
+        flex-basis: 50%;
+        flex-direction: column;
+      }
+      .console--window {
+        border: 1px solid black;
+        width: 246px;
+        margin-right: 3px;
+        padding: 3px;
+        /* height: 82vw; */
+        height: 470px;
+        overflow: scroll;
+        font-size: .9em;
+        text-transform: uppercase;
+        background-color: white;
+      }
+      ol,
+      ol li {
+        padding-left: 10px;
+        margin-left: 10px;
+      }
+      .icon {
+        height: 20px;
+        font-weight: bold;
+        position: relative;
+        margin-right: 5px;
+        /*top: 4px;*/
+      }
+      .smallicon {
+        height: 11px;
+        margin-left: 10px;
+        position: relative;
+      }
+
+      /* .bold {
+        font-weight: bold;
+      } */
+
+      .module {
+        margin-bottom:1em;
+      }
+      #trial-ended {
+        z-index: 999;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        padding: 1em 4em;
+        left: 0;
+        background-color: rgba(255,255,255, 0.9);
+        /*width: 400px;
+        height: 200px;*/
+        height: 100%;
+        width: 450px;
+        opacity: 1;
+        text-align: center;
+        display: none;
+      }
+
+      #trial-ended h1,
+      #trial-ended h2,
+      #trial-ended button {
+        position: relative;
+        /*right: 1em;*/
+        bottom: 2em;
+      }
+
+      #trial-ended a {
+        text-decoration: none;
+        color: white;
+        padding: 1em;
+        text-transform: uppercase;
+      }
+
+    </style>
+  </head>
+
+<body>
+    <div class="flex" style="width:100%; justify-content: center; overflow: hidden;">
+      <h1 style="height:60px;">NSTEPKA'S POSHMARK SHARER</h1>
+      <!-- <h2>7 Day Free Trial</h2> -->
+    </div>
+    <div class="content">
+      <div class="console flex">
+        <div class="console--window">
+          <ol id="consoleWindow">
+          </ol>
+        </div>
+        <button class="blue-bg" id="clearConsole" style="margin-right: 3px; margin-top: 5px; width: 255px; padding: 6px;">Clear Console</button>
+      </div>
+
+      <div class="buttons">
+        <div class="module">
+          <span class="flex">
+            <img class="icon" src="images/gear.svg">
+            <h2>General Settings</h2>
+          </span>
+          <p>Delay in seconds between actions (will choose a random number between the min & max)</p>
+
+          <span class="flex">
+            <p>Min:</p><input type="number" min="3" id="shareTimeMinimum" style="width: 50px;">
+            <p>Max:</p><input type="number" min="5" id="shareTimeMaximum" style="width: 50px;">
+          </span>
+          <br>
+          <span class="flex center">
+            <button class="green-bg" id="startSharing">Start<img class="smallicon" src="images/play.svg" /></button>
+            <button class="blue-bg" id="stopSharing">Stop<img class="smallicon" src="images/stop.svg" /></button>
+          </span>
+
+      </div>
+
+      <div class="module">
+        <span class="flex">
+          <img class="icon" src="images/shirt.svg">
+          <h2>Discount % to likers</h2>
+        </span>
+        <!-- <p>Shares items on page (skips sold items & Meet the Posher listings).</p> -->
+
+        <span>
+          <p> Enter the Discount you would like to send to likers:</p>
+          <input type="number" min="10" id="discountPercent" style="width: 50px;">
+        </span>
+        <br><br>
+        <span class="flex center">
+          <button class="green-bg" id="sendOffers">Start<img class="smallicon" src="images/play.svg" /></button>
+        </span>
+      </div>
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+
+  </body>
+</html>
